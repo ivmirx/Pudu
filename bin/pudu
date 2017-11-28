@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+var Fs = require('fs'),
+	Path = require('path');
+
+var length = process.argv.length;
+
+if (length == 2) {
+	var pudu = require("../lib/index");
+	pudu.generate();
+}
+else if (length > 2 && process.argv[2] =='install') {
+
+	if (Fs.existsSync('./config.yaml') == false) {
+		var templatePath = Path.join(__dirname, '../lib/config_template.yaml');
+		var template = Fs.readFileSync(templatePath, 'utf8');
+		Fs.writeFileSync('./config.yaml', template);
+	}
+
+	var directories = ['./pages/', './partials/', './shared/', './templates/'];
+	for (var i = directories.length - 1; i >= 0; i--) {
+		var path = directories[i];
+		if (Fs.existsSync(path) == false) {
+			Fs.mkdirSync(path);
+		}
+	}
+}
+else if (length > 2 && process.argv[2] =='min') {
+	require("../lib/minify").minify();
+}
+else if (length > 2 && process.argv[2] =='max') {
+	require("../lib/minify").unminify();
+}
+else {
+	console.error('Available commands:');
+	console.error('- "pudu" to generate a site from the current directory');
+	console.error('- "pudu install" to setup a new project');
+	console.error('- "pudu min" to minify CSS in the output directory');
+	console.error('- "pudu max" to restore original CSS in the output directory');
+}

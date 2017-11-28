@@ -1,0 +1,45 @@
+body {
+	line-height: 1.5;
+	font-size: 18px;
+	padding-top: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 10px;
+}
+
+p {
+	margin-top: 10px;
+}
+
+div {
+	display: block;
+}
+
+.container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.feature {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	max-width: 33%;
+	min-height: 1px;
+}
+
+.blog {
+	max-width: 620px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.feature p {
+	padding-right: 20px;
+}
+
+footer {
+	margin-top: 80px;
+}

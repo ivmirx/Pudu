@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- These are regular items that come from YAML configs in /setup directory. -->
+	<title>{{ head.title }}</title>
+	<meta name="description" content="{{ head.description }}">
+
+	<!-- These are shared items from /shared directory, "sh." is their default prefix. -->
+	{{{ sh.fonts }}}
+
+	<style type="text/css">
+		/* Main stylesheet*/
+		{{{ sh.css.style }}}
+
+		/* A small stylesheet to use different fonts between languages */
+		{{{ sh.css.fonts }}}
+
+		{{{ sh.css.navbar }}}
+	</style>
+
+	{{{ sh.analytics }}}
+</head>
+
+<body>
+	<!-- These are Handlebars.js partials items from /partials directory, "pa." is their default prefix. -->
+	<!-- Partials are mini-templates that are referred from other templates. ">" is required for them. -->
+	{{> pa.navbar }}
+
+	<div class="container hero">
+		<!-- These are regular items that are picked from YAML configs in /pages directory. -->
+
+		<h1>{{ title }}</h1>
+		<h2>{{ subtitle }}</h2>
+		<p>{{ br description }}</p>
+	</div>
+
+	<div class="container">
+
+		<!-- This is simple Handlebars loop that iterates over the features in the config -->
+		{{# each feautures }}
+		<div class="feature">
+			<h2>{{ this.title }}</h2>
+			<p>{{ this.text }}</p>
+		</div>
+		{{/ each }}
+
+
+		<!-- Expressions for links reflect structure of the /setup directory. -->
+		<!-- They must use "_" as prefix and suffix. Triple "{}" is to prevent HTML espacing. -->
+		<div>
+		<a href="{{{ _.help._ }}}">Have questions? Check the FAQ!</a>
+		</div>
+	</div>
+
+	{{{ sh.footer }}}
+
+	<script type="text/javascript">
+		{{{ sh.js.scripts }}}
+	</script>
+</body>
+</html>

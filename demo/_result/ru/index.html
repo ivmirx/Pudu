@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- These are regular items that come from YAML configs in /setup directory. -->
+	<title>Pudú - Your best choice of deer</title>
+	<meta name="description" content="Looking for a compact even-toed mammal? Check out Pudú – the world&#x27;s smallest deer!">
+
+	<!-- These are shared items from /shared directory, "sh." is their default prefix. -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+
+
+	<style type="text/css">
+		/* Main stylesheet*/
+		body {
+	line-height: 1.5;
+	font-size: 18px;
+	padding-top: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 10px;
+}
+
+p {
+	margin-top: 10px;
+}
+
+div {
+	display: block;
+}
+
+.container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.feature {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	max-width: 33%;
+	min-height: 1px;
+}
+
+.blog {
+	max-width: 620px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.feature p {
+	padding-right: 20px;
+}
+
+footer {
+	margin-top: 80px;
+}
+
+
+		/* A small stylesheet to use different fonts between languages */
+		body {
+	font-family: 'Roboto', sans-serif;
+}
+
+
+		nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	padding: 5px 20px;
+
+	background-color: #333 !important;
+	color: #fff;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav ul, nav li {
+  display: inline;
+  padding: 0;
+}
+
+nav li {
+	margin-left: 20px;
+}
+
+.navbar-brand {
+	display: inline-block;
+	margin-right: 20px;
+	font-size: 24px;
+}
+
+	</style>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'XX-XXXXXXXX-X', 'auto', {'allowLinker': true});
+  ga('require', 'linker');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+	<!-- These are Handlebars.js partials items from /partials directory, "pa." is their default prefix. -->
+	<!-- Partials are mini-templates that are referred from other templates. ">" is required for them. -->
+	<nav class="navbar">
+		<a class="navbar-brand" href="/ru/">Pudú</a>
+		<ul>
+			<li><a href="/ru/blog/">Blog</a></li>
+			<li><a href="/ru/help/">Help</a></li>
+		</ul>
+	</nav>
+
+	<div class="container hero">
+		<!-- These are regular items that are picked from YAML configs in /pages directory. -->
+
+		<h1>Pudú</h1>
+		<h2>This is our deer.</h2>
+		<p>Pudú dramatically improves the most important aspects of deer experience.<br>The smallest size and roundest shape ever in a deer.<br>Short, spiked antlers that are not forked.<br>And it looks every bit as cute as it is.<br>This is Pudú – the world&#x27;s smallest deer.<br></p>
+	</div>
+
+	<div class="container">
+
+		<!-- This is simple Handlebars loop that iterates over the features in the config -->
+		<div class="feature">
+			<h2>Design</h2>
+			<p>Pudú takes an incredibly popular deer design and refines it even further: the fur is long and stiff with a reddish-brown to dark-brown hue.</p>
+		</div>
+		<div class="feature">
+			<h2>Dimensions</h2>
+			<p>Deers have never been that light. Just 6.4 to 13.4 kg (14 to 30 lb) in weight and 35 to 45 cm (14 to 18 in) tall at the shoulder.</p>
+		</div>
+		<div class="feature">
+			<h2>Habitat</h2>
+			<p>Living in gorgeous temperate rainforests of South America, Pudú hides from predators in dense underbrush and bamboo thickets.</p>
+		</div>
+
+
+		<!-- Expressions for links reflect structure of the /setup directory. -->
+		<!-- They must use "_" as prefix and suffix. Triple "{}" is to prevent HTML espacing. -->
+		<div>
+		<a href="/ru/help/">Have questions? Check the FAQ!</a>
+		</div>
+	</div>
+
+	<div class="container">
+	<footer>
+		<hr>
+		<p>&copy; Pudú International 2017</p>
+	</footer>
+</div>
+
+
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>

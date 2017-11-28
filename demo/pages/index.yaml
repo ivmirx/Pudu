@@ -1,0 +1,26 @@
+_template: index.html
+
+head:
+  title: Pudú - Your best choice of deer
+  description: Looking for a compact even-toed mammal? Check out Pudú – the world's smallest deer!
+
+title: Pudú
+subtitle: This is our deer.
+
+description: |
+  Pudú dramatically improves the most important aspects of deer experience.
+  The smallest size and roundest shape ever in a deer.
+  Short, spiked antlers that are not forked.
+  And it looks every bit as cute as it is.
+  This is Pudú – the world's smallest deer.
+
+feautures:
+  -
+    title: Design
+    text: "Pudú takes an incredibly popular deer design and refines it even further: the fur is long and stiff with a reddish-brown to dark-brown hue."
+  -
+    title: Dimensions
+    text: Deers have never been that light. Just 6.4 to 13.4 kg (14 to 30 lb) in weight and 35 to 45 cm (14 to 18 in) tall at the shoulder.
+  -
+    title: Habitat
+    text: Living in gorgeous temperate rainforests of South America, Pudú hides from predators in dense underbrush and bamboo thickets.

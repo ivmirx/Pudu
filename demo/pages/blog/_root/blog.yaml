@@ -1,0 +1,6 @@
+_template: blog/index.html
+
+head:
+  title: Pudú Blog
+
+title: Latest blog posts

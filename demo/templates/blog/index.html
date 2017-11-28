@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ head.title }}</title>
+
+	{{{ sh.fonts }}}
+
+	<style type="text/css">
+		{{{ sh.css.style }}}
+		{{{ sh.css.fonts }}}
+		{{{ sh.css.navbar }}}
+	</style>
+
+	{{{ sh.analytics }}}
+</head>
+
+<body>
+	{{> pa.navbar }}
+
+	<div class="container">
+		<h1>{{ title }}</h1>
+		<!-- Partial because it contains links to posts which can change for localized versions -->
+		{{> pa.blog_posts }}
+	</div>
+
+	{{{ sh.footer }}}
+
+	<script type="text/javascript">
+		{{{ sh.js.scripts }}}
+	</script>
+</body>
+</html>

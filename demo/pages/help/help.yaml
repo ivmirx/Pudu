@@ -1,0 +1,22 @@
+_template: faq.html
+
+head:
+  title: Pudú - FAQ
+  description: Find the answers to your questions about Pudú
+
+
+title: Frequently Asked Questions
+
+questions:
+  -
+    question: Can I get a personal pudú?
+    answer: Please don't, they are classified as endangered species.
+  -
+    question: Where can I see a pudú?
+    answer: Southern Chile would be the best choice.
+  -
+    question: What does pudú eat?
+    answer: Vines, leaves from low trees, shrubs, succulent sprouts, herbs, ferns, blossoms, buds, tree bark, and fallen fruit.
+  -
+    question: Do female pudús have antlers?
+    answer: Unfortunately, no.

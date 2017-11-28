@@ -1,0 +1,4 @@
+_template: blog/post.html
+
+_markdown:
+  - text: introduction
