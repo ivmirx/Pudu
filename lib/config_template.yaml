@@ -1,14 +1,56 @@
-# if relative – it will be relative to the directory of the process
+# This config will be copied after running `pudu install`
 
-outputRootDirectory: ./html
-
-# null: confing file name must match parent directory name + ".yaml" extension
-# any other string: full file name with extension must match this string
-
-pageConfigsName: null
-
+###########
+# General #
+###########
 
 yamlExtension: .yaml
+
+# If relative, it will be relative to the directory of the process
+outputRootDirectory: ./html
+
+# Exclude files by exact name or by extension
+# For example: something.txt or *.txt
+ignoredFiles:
+  - .DS_Store # Generic system files on macOS
+
+# If `null` then config's file name must match parent directory's name + YAML extension
+# For example: Pudú will look for `about.yaml` in `about/` directory
+#
+# Any other string: full file name must match this string
+# For example: Pudú will always look for `config.yaml` if you set `pageConfigsName: config.yaml`
+pageConfigsName: null
+
+# Use parent directory names for generated files.
+# `false`: example.com/about-us/index.html
+# `true`: example.com/about-us/about-us.html
+#
+# Using `true` requires additional setup on your server
+# For nginx use: `location ~ ^(.*)/([^/]+)/$ { try_files $1/$2/$2.html =404; }`
+useDirectoryNamesForIndexNames: false
+
+
+################
+# Localization #
+################
+
+# Language code can be ISO 639-1 (like "en") or regional IETF tag (like "en-US")
+mainLocale: en
+
+# Uncomment below to add locales
+#additionalLocales:
+#  - es
+#  - ru
+
+# Enable if you want to keep the content in main language in a named directory
+# `false`: example.com/index.html
+# `true`: example.com/en/index.html
+useMainLocalePath: false
+
+
+############
+# Markdown #
+############
 
 markdownExtension: .md
 
@@ -21,51 +63,27 @@ markdownSettings:
   ghCodeBlocks: true
   openLinksInNewWindow: true
 
+# http://handlebarsjs.com/reference.html
 handlebarsOptions:
-  assumeObjects: true # highly recommended to get errors when a value for an expression is missing
-
-# generic system files
-ignoredFiles:
-  - .DS_Store
-
-# Can be ISO 639-1 language code (like "en") or regional IETF language tag (like "en-US").
-# Put <link rel="alternate" hreflang="en" href="http://en.example.com/" /> in the /blocks/
-# See https://webmasters.googleblog.com/2011/12/new-markup-for-multilingual-content.html
-
-# !! nginx example: redirect 301 /en/index.html http://www.domain.com
-
-mainLocale: en
-
-# uncomment to add locales
-#additionalLocales:
-#  - es
-#  - ru
+  assumeObjects: true # Highly recommended to get errors when a value for an expression is missing
 
 
-# Enable if you keep your default language in a named directory.
-# true: example.com/en/index.html
-# false: example.com/index.html
+#################
+# Handlebars.js #
+#################
 
-useMainLocalePath: false
+# If you haven't used Handlebars before, please read their docs at http://handlebarsjs.com
 
-# Use parent directory names for generated files.
-# false: example.com/about-us/index.html
-# true: example.com/about-us/about-us.html
+# Expressions for globals start with `gl` by default
+# For example: `{{gl.something}}`
+globalsPrefix: gl
 
-# "true" requires additional setup on your server!
-# For nginx use: location ~ ^(.*)/([^/]+)/$ { try_files $1/$2/$2.html =404; }
-
-useDirectoryNamesForIndexNames: true
-
-
-
-
-# Handlebars expressions for shared items start with "sh" by default
-sharedPrefix: sh
-
-# Handlebars expressions for partials start with "pa" by default
+# Expressions for partials start with `pa` by default
+# For example: `{{>pa.something}}`
+# Read how partials work: http://handlebarsjs.com/partials.html
 partialsPrefix: pa
 
-# by default expressions for links will be _.blog.post._
+# Expressions for localized URLs are framed with `_` by default
+# For example: `_.blog.hello-world._`
 linkPrefix: _
 linkSuffix: _
