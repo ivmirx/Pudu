@@ -37,10 +37,8 @@ useDirectoryNamesForIndexNames: false
 # Language code can be ISO 639-1 (like "en") or regional IETF tag (like "en-US")
 mainLocale: en
 
-# Uncomment below to add locales
-#additionalLocales:
-#  - es
-#  - ru
+# For example: ["es", "ru"]
+additionalLocales: []
 
 # Enable if you want to keep the content in main language in a named directory
 # `false`: example.com/index.html
@@ -65,7 +63,7 @@ markdownSettings:
 
 # http://handlebarsjs.com/reference.html
 handlebarsOptions:
-  assumeObjects: true # Highly recommended to get errors when a value for an expression is missing
+  strict: true # Highly recommended to get errors when a value for an expression is missing
 
 
 #################

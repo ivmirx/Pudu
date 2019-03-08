@@ -18,12 +18,12 @@
 	"main": "./lib/index.js",
 	"private": true,
 	"dependencies": {
-		"argparse": "~1.0.9",
-		"clean-css": "^4.1.8",
+		"argparse": "~1.0.10",
+		"clean-css": "~4.2.1",
 		"file": "~0.2.2",
-		"handlebars": "~4.0.10",
-		"js-yaml": "~3.9.1",
-		"recursive-readdir": "~2.2.1",
-		"showdown": "^1.7.4"
+		"handlebars": "~4.1.0",
+		"js-yaml": "~3.12.2",
+		"recursive-readdir": "~2.2.2",
+		"showdown": "~1.9.0"
 	}
 }
