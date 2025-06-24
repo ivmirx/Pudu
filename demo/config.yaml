@@ -1,0 +1,88 @@
+# Demo configuration for Pudú
+# This shows a multilingual site with blog functionality
+
+###########
+# General #
+###########
+
+yamlExtension: .yaml
+
+# If relative, it will be relative to the directory of the process
+outputRootDirectory: ./_result
+
+# Exclude files by exact name or by extension
+# For example: something.txt or *.txt
+ignoredFiles:
+  - .DS_Store # Generic system files on macOS
+
+# If `null` then config's file name must match parent directory's name + YAML extension
+# For example: Pudú will look for `about.yaml` in `about/` directory
+#
+# Any other string: full file name must match this string
+# For example: Pudú will always look for `config.yaml` if you set `pageConfigsName: config.yaml`
+pageConfigsName: null
+
+# Use parent directory names for generated files.
+# `false`: example.com/about-us/index.html
+# `true`: example.com/about-us/about-us.html
+#
+# Using `true` requires additional setup on your server
+# For nginx use: `location ~ ^(.*)/([^/]+)/$ { try_files $1/$2/$2.html =404; }`
+useDirectoryNamesForIndexNames: false
+
+
+################
+# Localization #
+################
+
+# Language code can be ISO 639-1 (like "en") or regional IETF tag (like "en-US")
+mainLocale: en
+
+# For example: ["es", "ru"]
+additionalLocales: ["es", "ru"]
+
+# Enable if you want to keep the content in main language in a named directory
+# `false`: example.com/index.html
+# `true`: example.com/en/index.html
+useMainLocalePath: false
+
+
+############
+# Markdown #
+############
+
+markdownExtension: .md
+
+# https://github.com/showdownjs/showdown#flavors
+markdownFlavor: github
+
+# https://github.com/showdownjs/showdown#valid-options
+markdownSettings:
+  ghCompatibleHeaderId: true
+  ghCodeBlocks: true
+  openLinksInNewWindow: true
+
+# http://handlebarsjs.com/reference.html
+handlebarsOptions:
+  strict: true # Highly recommended to get errors when a value for an expression is missing
+
+
+#################
+# Handlebars.js #
+#################
+
+# If you haven't used Handlebars before, please read their docs at http://handlebarsjs.com
+
+# Expressions for globals start with `gl` by default
+# For example: `{{gl.something}}`
+globalsPrefix: gl
+
+# Expressions for partials start with `pa` by default
+# For example: `{{>pa.something}}`
+# Read how partials work: http://handlebarsjs.com/partials.html
+partialsPrefix: pa
+
+# Expressions for localized URLs are framed with `_` by default
+# For example: `_.blog.hello-world._`
+linkPrefix: _
+linkSuffix: _
