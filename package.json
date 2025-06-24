@@ -1,11 +1,11 @@
 {
 	"name": "pudu",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Pudú-sized static site generator based on Handlebars.js",
-	"homepage": "https://qotoqot.com/pudu/",
+	"homepage": "https://qotoqot.com/",
 	"author": "Ivan Mir (https://qotoqot.com)",
 	"license": "Apache-2.0",
-	"repository": "QotoQot/pudu",
+	"repository": "ivmirx/pudu",
 	"keywords": [
 		"pudu",
 		"simple",
@@ -26,6 +26,7 @@
 		"file": "^0.2.2",
 		"handlebars": "^4.7.8",
 		"js-yaml": "^4.1.0",
+		"prismjs": "^1.30.0",
 		"recursive-readdir": "^2.2.3",
 		"showdown": "^2.1.0"
 	},

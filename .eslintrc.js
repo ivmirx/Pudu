@@ -7,7 +7,7 @@ module.exports = {
         "airbnb-base"
     ],
     "parserOptions": {
-        "ecmaVersion": 2015,
+        "ecmaVersion": 2018,
         "sourceType": "script"
     },
     "rules": {
@@ -46,6 +46,9 @@ module.exports = {
         "no-else-return": "off",
         "no-useless-return": "off",
         "quote-props": "off",
-        "key-spacing": "off"
+        "key-spacing": "off",
+        "no-await-in-loop": "off",
+        "no-cond-assign": "off",
+        "no-mixed-spaces-and-tabs": "off"
     }
 };
