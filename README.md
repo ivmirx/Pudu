@@ -24,7 +24,7 @@ Check out the `demo` directory to see the configuration and the resulting site.
 
 ## Quick start
 For example, you have a project in your portfolio, located at example.com/projects/puduscript/:
-```
+```html
 <head>
   <title>Introduction to PudúScript</title>
   <link rel="stylesheet" href="/css/style.css">
@@ -37,7 +37,7 @@ For example, you have a project in your portfolio, located at example.com/projec
 
 The title and the description are unique to this page but the CSS stylesheet and the navigation menu are used across all your site. Let's make a project page template by replacing everything with Handlebars.js paths and saving it to `/templates/project.html`.
 
-```
+```html
 <head>
   <title>{{title}}</title>
   {{>pa.style}}
@@ -78,7 +78,7 @@ There are three simple rules for `/pages/` content:
 For content in `/globals/`, keys always start with the `gl.` prefix and reflect the path to the file plus the filename without extension **plus** the key path inside YAML if it's a YAML file
 
 Example: if you have a YAML file stored at `/globals/path/to/myTexts.yaml`:
-```
+```yaml
 someText: Some Text
 moreTexts:
   anotherText: Another Text
@@ -104,7 +104,7 @@ Note that HTML parts have **three** curly braces (Handlebars.js calls it "triple
 
 - you can have HTML and Handlebars expressions inside Markdown too
 
-```
+```yaml
 _markdown:
   - text
   - something_else
@@ -162,14 +162,6 @@ REMOVE, use in the example project.
 ```
 
 If you fallback on English content in some places, for SEO purposes you should add `<rel ...>` to the duplicated pages:
-```
-example
-```
-
-Switching between languages can be done like this:
-```
-some js
-```
 
 
 ## Deployment
