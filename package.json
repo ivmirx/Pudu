@@ -16,19 +16,22 @@
 		"templates"
 	],
 	"main": "./lib/index.js",
+	"scripts": {
+		"lint": "eslint lib/ bin/pudu"
+	},
 	"private": true,
 	"dependencies": {
-		"argparse": "~1.0.10",
-		"clean-css": "~4.2.1",
-		"file": "~0.2.2",
-		"handlebars": "^4.7.2",
-		"js-yaml": "^3.13.1",
-		"recursive-readdir": "~2.2.2",
-		"showdown": "^1.9.1"
+		"argparse": "^2.0.1",
+		"clean-css": "^5.3.3",
+		"file": "^0.2.2",
+		"handlebars": "^4.7.8",
+		"js-yaml": "^4.1.0",
+		"recursive-readdir": "^2.2.3",
+		"showdown": "^2.1.0"
 	},
 	"devDependencies": {
-		"eslint": "^6.8.0",
-		"eslint-config-airbnb-base": "^14.0.0",
-		"eslint-plugin-import": "^2.20.0"
+		"eslint": "^8.57.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-plugin-import": "^2.32.0"
 	}
 }
